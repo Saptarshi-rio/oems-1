@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- PARTICIPANT SIGN UP PAGE -->
+<html>
+    <head>
+        <h1 style="text-align: center">bluEvent</h1>
+            <link rel="stylesheet" href="total.css">
+                <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+                    <title>bluEvent: Participant Login </title>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <h2 id="common" style="text-align:center"> Sign Up as New User!!! </h2>
+    </head>
+    <body>
+        <div>
+            <left>
+                    <a href="Parlogin.html"><button> Participant's Login Page </button> </a>
+            </left>
+            <center><h3> Please enter your details below </h3></center>
+            <center>
+                <form method="get" action="../OEMS/ParticipantEvent.html" id="signupForm">
+                    Name:<br><br>
+                    <input id="text" type="text" name="Pname"><br><p></p>    
+                    Username:<br><br>
+                    <input id="text" type="text" name="Pusername"><br><p></p>
+                    Password:<br><br>
+                    <input id="text" type="password" name="Ppassword"><br><br>
+                    Confirm Password:<br><br>
+                    <input id="text" type="password" name="Cpassword"><br><br>
+                    <br><br>
+                    <input type="submit" id="sub" value="Submit">
+                </form>
+            </center>
+        </div>
+        <div>
+            <label class="topnav-right">
+                 © A Demo by Saptarshi-bluEvent
+            </label>
+        </div>
+
+        <!-- ADD THESE SCRIPTS AT THE END OF THE BODY TAG -->
+        <script>
+            // Listen for the form's submit event
+            document.getElementById('signupForm').addEventListener('submit', function(event) {
+                // Get the values of the name, username, password, and confirm password fields
+                var name = document.getElementsByName('Pname')[0].value;
+                var username = document.getElementsByName('Pusername')[0].value;
+                var password = document.getElementsByName('Ppassword')[0].value;
+                var confirmPassword = document.getElementsByName('Cpassword')[0].value;
+
+                // Check if any of the fields are empty
+                if (!name || !username || !password || !confirmPassword) {
+                    // Prevent the form from being submitted
+                    event.preventDefault();
+
+                    // Show an error message
+                    alert('Please fill out all fields');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- REGISTER EVENT PAGE -->
+
+<html>
+    <head>
+        <link rel="stylesheet" href="total.css">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <title>bluEvent: Register for Event </title>
+        <h1 style="text-align: center">bluEvent</h1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+        <left>
+           <p>
+               <a href="Parlogin.html"><button> Log Out </button> </a>
+           </p>
+        </left>
+        <div>
+            <center>
+            <h2> Event Registration </h2>
+            </center>
+        </div>
+            <center>
+                <form method="get" action="../OEMS/Payment.html">
+                    Enter Event Name:<br><br>
+                    <input type="text" id="text" name="ename" required><br><p></p>
+                    Enter Event No:<br><br>
+                    <input type="text" id="text" name="enum" required><br><p></p>
+                    Enter Card No:<br><br>
+                    <input type="text" id="text" name="cardno" required><br><p></p>
+                    Enter Expiry Date:<br><br>
+                    <input type="text" id="text" name="edate" required><br><p></p>
+                    Enter CVV No:<br><br>
+                    <input type="password" id="text" name="cvv" required><br><p></p>
+                    Enter Card Holder's Name:<br><br>
+                    <input type="text" id="text" name="cname" required><br><p></p>
+                    <input type="submit" id="sub" value="Proceed For Payment">
+                </form>
+            </center>
+            <center>
+                <p id="error" style="color:red;"></p>
+            </center>
+        </div>
+         <div>
+            <label class="topnav-right">
+                 © A Demo by Saptarshi-bluEvent
+            </label>
+        </div>
+        <script>
+            var form = document.querySelector('form');
+            var error = document.getElementById('error');
+
+            form.addEventListener('submit', function(event) {
+                if (document.querySelector('input[name="ename"]').value === '') {
+                    event.preventDefault();
+                    error.textContent = 'Please fill out all fields';
+                }
+            });
+        </script>
+    </body>
+</html>

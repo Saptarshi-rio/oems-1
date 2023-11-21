@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- CREATE EVENT PAGE -->
+<html>
+    <head>
+        <h1 style="text-align: center">bluEvent</h1>
+        <link rel="stylesheet" href="total.css">
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+        <title>bluEvent: Create Event</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h2 id="common" style="text-align: center">Add Events</h2>
+        <script>
+            function validateForm() {
+                var eventNo = document.forms["myForm"]["EventNo"].value;
+                var eventName = document.forms["myForm"]["EventName"].value;
+                var coordinatorName = document.forms["myForm"]["coordinatorName"].value;
+                var coordinatorNo = document.forms["myForm"]["CoordinatorNo"].value;
+                var fee = document.forms["myForm"]["fee"].value;
+                var venue = document.forms["myForm"]["venue"].value;
+                var date = document.forms["myForm"]["date"].value;
+
+                if (eventNo == "" || eventName == "" || coordinatorName == "" || coordinatorNo == "" || fee == "" || venue == "" || date == "") {
+                    alert("Please fill in all the required fields.");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <left><p><a href="EventDetails.html"><button> Event Details Page </button> </a></p></left>
+          <center>
+            <form method="get" action="" name="myForm" onsubmit="return validateForm()">
+            Event Number:<br><br>
+            <input id="text" type="text" name="EventNo"><br><br>
+            Event Name:<br><br>
+            <input id="text" type="text" name="EventName"><br><br>
+            Coordinator Name:<br><br>
+            <input id="text" type="text" name="coordinatorName"><br><br>
+            Coordinator Number:<br><br>
+            <input id="text" type="text" name="CoordinatorNo"><br><br>
+            Fee for registration:<br><br>
+            <input id="text" type="text" name="fee"><br><br><p></p>
+            Venue of event:<br><br>
+            <input id="text" type="text" name="venue"><br><br><p></p>
+            Date of event:<br><br>
+            <input id="text" type="text" name="date"><br><br><p></p>
+            <input type="submit" id="sub" value="Submit">
+            </form>
+         </center> 
+        </div>
+         <div>
+            <label class="topnav-right">
+                 © A Demo by Saptarshi-bluEvent
+            </label>
+        </div>
+    </body>
+</html>
